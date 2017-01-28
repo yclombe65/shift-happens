@@ -296,3 +296,37 @@
   border-image: initial;
   border-radius: 4px;    
 }
+
+.shift-man{
+        margin-top: 10%;
+    TEXT-ALIGN: CENTER;
+}
+
+
+.shift-man li{
+    list-style: none;
+}
+.big-shift {
+    width: 50%;
+}
+
+.min-shift {
+    width: 35%;
+    margin-top: 15%;
+    list-style: none;
+    text-align: center;
+
+}
+
+.min-shift  {
+    text-align: center;
+}
+
+
+.led-box-man {
+    height: 30px;
+    width: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    /* float: left; */
+}
