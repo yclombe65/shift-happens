@@ -118,6 +118,7 @@ io.on('connection', function (socket) {
   socket.on('chat-message', function (message) {
     // On ajoute le username au message et on émet l'événement
     message.username = loggedUser.username;
+    message.log = users;
     io.emit('chat-message', message);
     // Sauvegarde du message
     messages.push(message);

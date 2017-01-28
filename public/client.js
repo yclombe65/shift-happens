@@ -43,10 +43,13 @@ $('#chat form').submit(function (e) {
   var message = {
     text : $('#m').val()
   };
+  message.person = $('#user').val();
+  $('#user').val('');
   $('#m').val('');
   if (message.text.trim().length !== 0) { // Gestion message vide
     socket.emit('chat-message', message);
   }
+
   $('#chat input').focus(); // Focus sur le champ du message
 });
 
@@ -55,10 +58,17 @@ $('#chat form').submit(function (e) {
  */
 socket.on('chat-message', function (message) {
 	console.log(message);
-	console.log("sssss");
-if(message.text == message.username){
-  $('#messages').append($('<li>').html('<span class="username">' + message.username + '</span> ' + message.text));
-};
+	console.log(message.person);
+	for (i = 0; i < message.log.length; i++) {
+	console.log(message.log);
+	console.log(message.log[i]);
+		if(message.person == message.log[i].username){
+  			$('#messages').append($('<li>').html('<span class="username">' + message.username + '</span> ' + message.text));
+		} else {
+	  		$('#messages').append($('<li class="logout">').html('<span class="info">Error</span> Invalid User'));
+	  		break;
+		};
+	}
   scrollToBottom();
 });
 
