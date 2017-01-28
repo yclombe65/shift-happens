@@ -1,9 +1,10 @@
 {
-  "name": "my-first-chat",
+  "name": "shift-happens",
   "version": "0.0.1",
   "description": "PSA - DASHBOARD",
   "dependencies": {
     "express": "^4.10.2",
+    "handlebars": "^4.0.6",
     "socket.io": "^1.7.2"
   }
 }
