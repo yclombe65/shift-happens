@@ -1,8 +1,9 @@
 var express = require('express');
 var app = express();
 var expressHbs = require('express3-handlebars');
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var http = require('http');
+var server = app.listen(3000);
+var io = require('socket.io').listen(server);
 
 app.engine('hbs', expressHbs({extname:'hbs', defaultLayout:'main.hbs'}));
 app.set('view engine', 'hbs');
@@ -208,4 +209,4 @@ io.on('connection', function (socket) {
 });
 
 
-app.listen(3000);
+// app.listen(3000);
