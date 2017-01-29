@@ -1,3 +1,6 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
 <div id="wrapper" class="active">
       <div id="sidebar-wrapper">
 	<ul id="sidebar_menu" class="sidebar-nav">
@@ -45,10 +48,59 @@
                                         <div class="led-green"></div>
 		                  </div>
                               </div>
-               <div class="col-md-4">
-	      
+               <div class="col-md-12">
+	      <div id="container" style="min-width: 310px; height: 400px; margin-top:40px;"></div>
+
 	    </div>
 	  </div>
       </div>
     </div>
 </div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+$(function () {
+    Highcharts.chart('container', {
+        title: {
+            text: "Défault qualité généré sur l'UEP'",
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ['00h00', '01h00', '02h00', '03h00', '04h00', '05h00',
+                '06h00', '07h00', '08h00', '09h00', '10h00', '11h00', '12h00', '13h00', '14h00', '15h00',
+                        '16h00', '17h00', '18h00', '19h00', '20h00', '21h00', '22h00', '23h00']
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: ''
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Passé',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 9.6, 9.6, 9.6, 9.6, 9.6, 9.6, 9.6, 9.6, 9.6, 9.6, 9.6, 9.6]
+        }, {
+            name: 'Prévisions',
+            data: [43.83794825691178, 100.8926200990125,70.780055862635606, 22.169938050236883, 33.082509589822578, 19.085969616399076, 43.703756892660181, 38.153915095191671, 28.964137336920466, 33.405842229165138, 24.015975627526984, 19.723516097245742, 24.565802003088134, 21.836631717231075, 22.035089426556201, 13.356499126781065, 26.742985527547535, 23.939575957458285,  13.431609959229974, 15.743282749763004,28.897426957476334, 21.060286116247504, 40.143404434455299, 60.869596112489937]
+        }]
+    });
+});
+
+     
+</script>

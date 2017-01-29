@@ -1,10 +1,14 @@
- <div id="wrapper" class="active">
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+ 
+<div id="wrapper" class="active">
       <div id="sidebar-wrapper">
 	<ul id="sidebar_menu" class="sidebar-nav">
 	  <li class="sidebar-brand">
 	    <a id="menu-toggle" href="/home">Menu<span id="main_icon" class="main-align glyphicon glyphicon-home"></span></a>
 	  </li>
 	</ul>
+	    
 	<ul class="sidebar-nav" id="sidebar">
 	  <li><img src="/static/img/man.png"></li>
 	  <li><h4>@john_doe</h4></li>
@@ -12,10 +16,11 @@
       </ul></div>
       <div id="page-content-wrapper">
 	<div class="page-content inset">
-	  <div class="row">
+	  <div class="row" style="    margin-right: 40px;
+    margin-left: 40px;">
 	    <h1 style="text-align:center;">SHIFT - HAPPENS</h1>
 	    <div class="col-md-8 list-box">
-	      <div class="box-maillon">
+	      <div class="box-maillon col-sm-12">
 		<div class="led-box">
 		  <div class="led-green"></div>
 		  <h2>ID: FER</h2>
@@ -70,7 +75,8 @@
 		  <div class="led-green"></div>
 		  <h2>ID: 1MV3</h2>
 		</div>
- <a href="/shift"><button type="button" class="btn btn-secondary">Accéder à L'UEP</button></a>	      </div>
+ <a href="/shift"><button type="button" class="btn btn-secondary">Accéder à L'UEP</button></a>
+		    </div>
 		    <div class="box-maillon">
 		<div class="led-box">
 		  <div class="led-green"></div>
@@ -81,34 +87,37 @@
 		<div class="led-box">
 		  <div class="led-green"></div>
 		  <h2>ID: QCP</h2>
+			<svg width="960" height="500"></svg>
+
 		</div>
  <a href="/shift"><button type="button" class="btn btn-secondary">Accéder à L'UEP</button></a>	      </div>
 		    
 	    </div>
+		
 	    <div class="col-md-4">
+		   
 	      <section id="chat">
           <ul id="messages">
           </ul>
-          <ul id="users">
-          </ul>
         <form action="">
-          <label>Message: </label><input id="m" autocomplete="off" class="input-lg"/></br>
-          <label>User: </label><input id="user" autocomplete="off" class="input-lg"/>
-          <button class="btn btn-secondary">Send</button>
+          <label>INFO : </label><input id="m" autocomplete="off" class="input-lg"/></br>
+          <label>UEP : </label><input id="user" autocomplete="off" class="input-lg"/>
+          <button class="btn btn-secondary">Envoyer</button>
         </form>
       </section>
 	    </div>
-	  </div>
+	  
 	</div>
       </div>
     </div>
 
  <section id="login">
       <form action="">
-        <label for="u">Username</label>
+        <label for="u">UEP : </label>
         <input id="u" autocomplete="off" autofocus />
         <p>
           <button>Login</button>
         </p>
       </form>
     </section>
+
