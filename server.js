@@ -9,6 +9,6 @@ var io = require('socket.io')(http);
 app.use("/", express.static(__dirname + "/public/"));
 
 // On lance le serveur en écoutant les connexions arrivant sur le port 3000
-http.listen(3000, function(){
+http.listen(process.env.PORT || 3000, function(){
     console.log('Server is listening on *:3000');
 });
